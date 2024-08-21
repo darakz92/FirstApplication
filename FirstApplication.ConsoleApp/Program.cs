@@ -18,6 +18,8 @@ namespace FirstApplication.ConsoleApp
             Console.WriteLine("MyAge " + age);
             Console.WriteLine("Do I have a pet? " + have_pet);
             Console.WriteLine("My shoe size is " + shoe_size);
+
+            //end
         }
     }
 }
