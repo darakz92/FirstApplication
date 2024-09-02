@@ -1,24 +1,34 @@
 ﻿using System;
 
-namespace FirstApplication.ConsoleApp
+class MainClass
 {
-    class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+        var color = Console.ReadLine();
+
+        if (color == "red")
         {
-            Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.Write("Enter your age: ");
-            byte age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("Your color is red!");
+        }
 
-            Console.WriteLine("Enter date of Birth in format Day/Month/year: ");
+        else if (color == "green")
+        {
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
 
-            DateOnly date;
-            date = DateOnly.Parse(Console.ReadLine());
+            Console.WriteLine("Your color is green!");
+        }
+        else
+        {
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Your name is {0} and age is {1} and date of birth {2} ", name, age, date);
-            Console.ReadKey();
+            Console.WriteLine("Your color is cyan!");
         }
     }
 }
